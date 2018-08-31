@@ -1,0 +1,7 @@
+<nav>
+    <ul>
+    {% for link in site.data.menu %}
+        <li><a href=" {% if forloop.first %}/{% else %}/{{ link }}/{% endif %}" class="{% if page.url contains '/index.html' %} current {% endif %}" >{{ link | upcase }}</a></li>
+    {% endfor %}
+    </ul>
+</nav>
