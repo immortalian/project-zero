@@ -1,7 +1,13 @@
 <nav>
     <ul>
+<<<<<<< HEAD
         <li><a href="/index.html" class="{% if page.url contains '/index.html' %} current {% endif %}" >Home</a></li>
         <li><a href="/about.html" class="{% if page.url contains '/about.html' %} current {% endif %}" >About</a></li>
         <li><a href="/services.html" class="{% if page.url contains '/services.html' %} current {% endif %}"> Services </a></li>
+=======
+    {% for link in site.data.menu %}
+        <li><a href=" {% if forloop.first %}/{% else %}/{{ link }}/{% endif %}" class="{% if page.url contains '/index.html' %} current {% endif %}" >{{ link | upcase }}</a></li>
+    {% endfor %}
+>>>>>>> e98bdf4a45392b06f35a1f2d4c3e7a5efc965c8f
     </ul>
 </nav>
